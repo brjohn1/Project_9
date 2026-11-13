@@ -20,7 +20,16 @@
 #include <stdint.h>
 #include <stdio.h>
 
-// Set to 1 to turn on the extra credit tank turn (LEFT, LEFT or RIGHT, RIGHT); 0 = required behavior only
+/*
+ * System Clock: Runs STM32 at 180 MHz.
+ * SysTick: Tracks time in 1 ms intervals.
+ * TIM1: Measures servo feedback.
+ * TIM4: Sends PWM to control servos.
+ * TIM5: Refreshes the SSD.
+ * ADC3: Reads potentiometer.
+ */
+
+
 #define ENABLE_TANK_TURN   1
 
 // Buttons are active low (pressed = 0) with external pull-ups on the shield
